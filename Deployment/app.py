@@ -4,7 +4,6 @@ import cv2
 import tensorflow as tf
 import streamlit as st
 from PIL import Image
-from keras.preprocessing import image
 from streamlit_drawable_canvas import st_canvas
 
 animal_model = tf.keras.models.load_model('Deployment/mobilenet_final.h5')
@@ -25,7 +24,7 @@ def animalmodel(preview):
     
         x = Image.open(img)
         x = x.resize((150,150))
-        x = image.img_to_array(x)
+        x = tf.keras.utils.img_to_array(x)
         x /= 255
         scaled_img = np.expand_dims(x, axis=0)
 
@@ -70,7 +69,7 @@ def numbermodel(s_color, s_width):
     if st.button('Analyze') and img is not None:
         x = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         x = cv2.resize(x, (28,28), interpolation=cv2.INTER_NEAREST)
-        x = image.img_to_array(x)
+        x = tf.keras.utils.img_to_array(x)
         x /= 255
         scaled_img = np.expand_dims(x, axis=0)
 
