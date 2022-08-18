@@ -101,7 +101,7 @@ def main():
     model = st.sidebar.selectbox('Select One', ['Animal', 'Number'])
 
     if model == 'Number':
-        stroke_width = st.sidebar.slider('Stroke Width', 15, 25)
+        stroke_width = st.sidebar.slider('Stroke Width', 20, 25)
         stroke_color = st.sidebar.color_picker('Stroke Color', '#dee2e6')
     else:
         preview = st.sidebar.radio('Preview Image', ['Yes', 'No'])
