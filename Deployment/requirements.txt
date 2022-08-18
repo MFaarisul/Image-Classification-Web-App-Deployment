@@ -2,3 +2,4 @@ numpy
 Pillow
 opencv-python-headless
 tensorflow
+streamlit_drawable_canvas
