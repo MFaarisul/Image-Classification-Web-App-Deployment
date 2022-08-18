@@ -1,5 +1,4 @@
 numpy
 opencv-python-headless
-keras
 tensorflow
 streamlit_drawable_canvas
