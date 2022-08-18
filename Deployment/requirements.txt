@@ -1,6 +1,3 @@
 numpy
-matplotlib
-runipy
-opencv-python
+opencv-python-headless
 tensorflow
-streamlit_drawable_canvas
