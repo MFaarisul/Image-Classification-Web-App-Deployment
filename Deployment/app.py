@@ -7,11 +7,11 @@ from PIL import Image
 from keras.preprocessing import image
 from streamlit_drawable_canvas import st_canvas
 
-animal_model = tf.keras.models.load_model('mobilenet_final.h5')
-with open('label.txt', 'r') as f:
+animal_model = tf.keras.models.load_model('Deployment/mobilenet_final.h5')
+with open('Deployment/label.txt', 'r') as f:
     labels = f.read().split('\n')
 
-number_model = tf.keras.models.load_model('number_model.h5')
+number_model = tf.keras.models.load_model('Deployment/number_model.h5')
 
 def animalmodel(preview):
     with st.expander("See the labels"):
